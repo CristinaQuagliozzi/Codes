@@ -1,17 +1,17 @@
-#define PIN_BUZZER 7 //associato al pin 7 
+#define PIN_BUZZER 7 //associate the exit that you want 
 
 bool control_variable;
 
 
-void setup(){   //inizilizziamo il setup 
+void setup(){   //initialize the setup 
   pinMode(PIN_BUZZER, OUTPUT);
 }
 
-void loop(){ //definiamo la funzione suona 
+void loop(){ //define the function 'suona'
   suona();
 }  
 
-void frequenza_1() { //generiamo un suono a frequenze minori 
+void frequenza_1() { //generate a sound with lower frequency 
   for(int i=0;i<80;i++){
     digitalWrite(PIN_BUZZER,HIGH);
     delay(1);
@@ -21,7 +21,7 @@ void frequenza_1() { //generiamo un suono a frequenze minori
   }
 }
 
-void frequenza_2() { //suono con frequenza diversa per avere due suoni che combinati ricordano quello della sirena 
+void frequenza_2() { //sound with a different frequency 
   for(int i=0;i<100;i++){
     digitalWrite(PIN_BUZZER, HIGH);
     delay(2);//wait for 2ms
@@ -31,7 +31,7 @@ void frequenza_2() { //suono con frequenza diversa per avere due suoni che combi
   }
 }
 
-void suona() { //altrerna l'esecuzione di frequenza uno e due 
+void suona() { //alternate 2 frequencies
   if (control_variable !=0 ){
     frequenza_1();
     frequenza_2();

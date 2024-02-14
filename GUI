@@ -1,4 +1,4 @@
-function varargout = Esercitazione1_gui(varargin)
+function varargout = GUI(varargin)
 % ESERCITAZIONE1_GUI MATLAB code for Esercitazione1_gui.fig
 %      ESERCITAZIONE1_GUI, by itself, creates a new ESERCITAZIONE1_GUI or raises the existing
 %      singleton*.
